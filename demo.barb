@@ -1,0 +1,24 @@
+//Jacob Barbulescu
+//I pledge my Honor that I have abided by the Stevens Honor System.
+
+//BARBUSOFT 9000 Demo Program
+
+//This program will add 4 to 3, store it in the RAM, take it back from the RAM, subtract 5 from it, then double it, then store it back in ram
+
+//Inititalizes x0 and x1 to 4 and 3, respectively
+Set 4, x0
+SET 3, X1
+
+DIS 15      //Displays 15 (0f), just for funsies
+
+ADd x0, x1, x2 //X2 = x0+x1
+DIS x2            //Shows the value of x2 on the LED display
+STR x0, 5, x2   //Stores x2 (7) in address x0+5 (09) of the DataRam
+
+LDR x0, 5, x3   //Loads address 9 of DataRam to x3
+SUB x3, 5, x3   //x3 = x3-5
+DiS x3
+ADD x3, x3, x3  //x3=x3+x3
+DIS x3
+
+str x0, x1, x3  //Stores x3 at address x0+x1 (07) of the DataRam
